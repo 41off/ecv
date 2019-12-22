@@ -129,7 +129,7 @@ body {
   background-color: black;
   color: #fff;
   text-decoration:blink;
-  font-weight:bold;
+  font-weight:normal;
   text-align: center;
   border-width:2px;
   border-style:inset;
@@ -191,11 +191,11 @@ body {
   visibility: hidden;
   width: 180px;
   height:50px;
-  background-color: #a8a9ad;
-  border-color: white;
-  color: blue;
+  background-color: black;
+  border-color: silver;
+  color: white;
   text-decoration:blink;
-  font-weight:bold;
+  font-weight:normal;
   text-align: center;
   margin-left:5px;
   display: inline-flex;
@@ -419,6 +419,35 @@ body {
     color:blue;
     text-decoration:underline 
 }
+
+.playlistbutton .plbtext {
+  visibility: hidden;
+  width: 180px;
+  height:50px;
+  background-color: black;
+  border-color: silver;
+  color: white;
+  text-decoration:blink;
+  font-weight:bold;
+  text-align: center;
+  margin-left:5px;
+  display: inline-flex;
+  align-items: center;
+  border-width:2px;
+  border-style:inset;
+  border-radius: 6px;
+  line-height: 125%;
+  right: 20%;
+  top: 101%;
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+ 
+}
+.playlistbutton:hover .plbtext {
+  visibility: visible;
+}
+
 .zoomin {
     background-color: black; 
     color: white;
@@ -709,7 +738,7 @@ ul{list-style-type: disc; color:red
             <button class="timerbutton" id="timerbuttonreset" onclick="on0()">Repeat</button> 
             <button class="timerbutton timerbutton3" onClick="onVideoNext()">Next</button>
             <button class="timerbutton timerbutton3" onClick="onVideoBack()">Prior</button>
-            <button class="timerbutton timerbutton6" href="#" onclick='window.open("https://41off.github.io/41off/ecv.html");return true;'>[\+/]<span class="tbtext">&nbsp;&nbsp;Click to open full seperate window.</span></button>
+            <button class="timerbutton timerbutton6" href="#" onclick='window.open("https://41off.github.io/41off/ecv.html");return false;'>[\+/]<span class="tbtext">&nbsp;&nbsp;Click to open full seperate window.</span></button>
           </div> 
                
          <div class="timer">
@@ -724,18 +753,20 @@ ul{list-style-type: disc; color:red
       <span class="closebtn2">&times;</span>
           <left>Playlist<br></left><br>
             <right>
-               <button class="playlistbutton "onclick="on0()"><li>Clip 1</li></button>
+               <button class="playlistbutton" onclick="on0()"><li>Clip 1</li></button>
                <button class="playlistbutton" onclick="on1()"><li>Clip 2</li></button>
-               <button class="playlistbutton "onclick="on2()"><li>Clip 3</li></button>
+               <button class="playlistbutton" onclick="on2()"><li>Clip 3</li></button>
                <button class="playlistbutton" onclick="on3()"><li>Clip 4</li></button>
-               <button class="playlistbutton "onclick="on4()"><li>Clip 5</li></button>
+               <button class="playlistbutton" onclick="on4()"><li>Clip 5</li></button>
                <button class="playlistbutton" onclick="on5()"><li>Clip 6</li></button>
-               <button class="playlistbutton "onclick="on6()"><li>Clip 7</li></button>
+               <button class="playlistbutton" onclick="on6()"><li>Clip 7</li></button>
                <button class="playlistbutton" onclick="on7()"><li>Clip 8</li></button>
-               <button class="playlistbutton "onclick="on8()"><li>Clip 9</li></button>
+               <button class="playlistbutton" onclick="on8()"><li>Clip 9</li></button>
                <button class="playlistbutton" onclick="on9()"><li>Clip 10</li></button>
-               <button class="playlistbutton "onclick="on10()"><li>Clip 11</li></button>
+               <button class="playlistbutton" onclick="on10()"><li>Clip 11</li></button>
                <button class="playlistbutton" onclick="on11()"><li>Clip 12</li></button>
+               <button class="playlistbutton" href="#" onclick="parent.location='https://sites.google.com/a/41off.com/rcts/media/ecv'"><li>HOME</li><span class="plbtext">Click to open this page in Victory Lake.</span></button>
+
           </right>
        </div>
                
